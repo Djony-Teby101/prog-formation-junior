@@ -3,17 +3,17 @@ class CompteBancaire:
   self.nom_titulaire=nom_titulaire
   self.solde=solde_initial
 
-  print(f"Compte crée pour {self.nom_titulaire}, le solde est de {self.solde} Fcfa")
+  print(f"Compte crée pour {self.nom_titulaire}, le solde est de {self.solde} F CFA")
 
-  # Methode pour consulter le solde.
+  # Méthode pour consulter le solde.
  def afficher_solde(self):
-   print(f"Solde actuel du compte de Mr {self.nom_titulaire}: est de {self.solde} Fcfa")
+   print(f"Solde actuel du compte de Mr {self.nom_titulaire}: est de {self.solde} F CFA")
 
  def retirer(self, montant):
 
   if montant>0:
    self.solde -= montant
-   print(f"un retrait de {montant} à ete effectue. Nouveau solde: {self.solde} Fcfa")
+   print(f"un retrait de {montant} à ete effectue. Nouveau solde: {self.solde} F CFA")
   else:
    print("Operation invalide !")
 
@@ -21,7 +21,7 @@ class CompteBancaire:
 
   if type(montant)==int and montant>0:
    self.solde += montant
-   print(f"un retrait de {montant} à ete effectue. Nouveau solde: {self.solde} Fcfa")
+   print(f"un retrait de {montant} à ete effectue. Nouveau solde: {self.solde} F CFA")
    print(type(montant))
   else:
    print("Operation invalide !")

@@ -1,16 +1,16 @@
-projet n°2
+# Projet N°2
 
-Objectif pedadogique:
+__Réaliser un système de gestion des utilisateurs simple.__
+
+## Objectif pédagogique
+
     Faciliter la compréhension des bases du langages python par la pratique.
 
-Description du projet:
-    réaliser un systeme de gestion des utilisateurs simple.
+## Caractéristique de l'application
 
-Caractéristique de l'application:
-    
-    - Creer des etudiants.
-    - Inserer des notes.
-    - Afficher Tous les etudiants.
-    - Retourne le meilleur etudiants.
+    - Créer des étudiants.
+    - Insérer des notes.
+    - Afficher Tous les étudiants.
+    - Retourne le meilleur étudiants.
     - Gestion des utilisateurs.
-    - Afficher le meilleur Etudiant.
+    - Afficher le meilleur étudiant.

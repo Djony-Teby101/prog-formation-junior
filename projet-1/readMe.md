@@ -1,15 +1,17 @@
-Projet N°1
+# Projet N°1
 
-Objectif:
-    Ce projet à pour abjectif de mettre en avons les rudiments en matiere de programmation en python.
+## Objectif
 
-Caracteristique du programme:
-    Se mini proramme permet de gener les differentes operation effectue sur airtel money, notamment:
-        
-        - Créer un compte.
-        - Consulter le Solde du compte.
-        - Effectue des depots sur le compte.
-        - Effectuer des retraits sur le compte.
+    Ce projet à pour objectif de mettre en avons les rudiments en matière de programmation en python.
+
+## Caractéristiques du programme
+
+Ce mini programme permet de gérer les différentes operation effectue sur Airtel Money, notamment:
+
+    - Créer un compte.
+    - Consulter le Solde du compte.
+    - Effectue des depots sur le compte.
+    - Effectuer des retraits sur le compte.
 
 Notion clés:
 
