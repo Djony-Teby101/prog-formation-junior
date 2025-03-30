@@ -1,28 +1,33 @@
 class BankAccount:
-    # BankAccount est une classe qui représente un compte bancaire simple avec des opérations de base telles que le dépôt, 
-    # le retrait et la consultation du solde.
-    #     _balance (int) : Le solde actuel du compte (attribut privé).
-    # Méthodes :
-    #     __init__(account_holder: str, initial_balance: int = 0) :
-    #     balance :
-    #         Propriété qui récupère le solde actuel du compte.
-    #     show_balance() :
-    #         Affiche le solde actuel du compte, y compris le nom du titulaire.
-    #     withdraw(amount: int) :
-    #         Retire un montant spécifié du compte si les fonds sont suffisants. Affiche des messages appropriés
-    #         en cas de succès, de fonds insuffisants ou d'entrée invalide.
-    #     deposit(amount: int) :
-    #         Ajoute un montant spécifié au solde du compte. Affiche des messages appropriés en cas de succès ou d'entrée invalide.
+    """
+    ### BankAccount
+
+    BankAccount est une classe qui représente un compte bancaire simple avec des opérations de base telles que le dépôt, le retrait et la consultation du solde.
+
+    #### Méthodes :
     
+    - `__init__(account_holder: str, initial_balance: int = 0)`:
+        Constructeur qui initialise un compte bancaire avec le nom du titulaire et un solde initial optionnel.
+    - `balance()` :
+        Récupère le solde actuel du compte.
+    - `show_balance()` :
+        Affiche le solde actuel du compte, y compris le nom du titulaire.
+    - `withdraw(amount: int)` :
+        Retire un montant spécifié du compte si les fonds sont suffisants. Affiche des messages appropriés
+        en cas de succès, de fonds insuffisants ou d'entrée invalide.
+    - `deposit(amount: int)` :
+        Ajoute un montant spécifié au solde du compte. Affiche des messages appropriés en cas de succès ou d'entrée invalide.
+    """
     def __init__(self, account_holder: str, initial_balance: int = 0):
         """
         Initialise un compte bancaire avec le nom du titulaire et un solde initial optionnel.
-        Args :
+
+        - Args :
             account_holder (str) : Le nom du titulaire du compte.
             initial_balance (int, optionnel) : Le solde initial du compte. La valeur par défaut est 0.
-        Attributs :
-            account_holder (str) : Le nom du titulaire du compte.
-            _balance (int) : Le solde actuel du compte.
+        - Attributs :
+            `account_holder (str)` : Le nom du titulaire du compte.
+            `_balance (int)` : Le solde actuel du compte.
         """
         self.account_holder = account_holder
         self._balance = initial_balance
@@ -61,14 +66,22 @@ class BankAccount:
             - Un message de succès avec le montant retiré et le nouveau solde si l'opération réussit.
             - Un message d'erreur si les fonds sont insuffisants.
             - Un message d'erreur si le montant fourni n'est pas un entier positif.
+            - Un message d'erreur si le montant est supérieur au solde actuel.
+            - Un message d'erreur si le montant est invalide.
         """
         if isinstance(amount, int) and amount > 0:
             if amount <= self._balance:
                 self._balance -= amount
                 print(f"Un retrait de {amount} F CFA a été effectué. Nouveau solde : {self._balance} F CFA")
             else:
-                print("Fonds insuffisants !")
+                raise ValueError("Montant supérieur au solde actuel !")
         else:
+            if amount <= 0:
+                raise ValueError("Le montant doit être supérieur à zéro !")
+            else:
+                raise TypeError("Opération invalide ! Le montant doit être un entier positif.")
+            
+        if isinstance(amount, int) and amount > 0:
             print("Opération invalide ! Le montant doit être un entier positif.")
     
     def deposit(self, amount: int):
